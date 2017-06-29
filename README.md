@@ -12,3 +12,5 @@ How to use:
 
 * Unread count only, immediately updated - paste the contents of **unread-notification.js**
 * Unread count and web notifications on incoming mail - paste the contents of **new-mail-notification.js**
+
+Ideas and pull requests are welcome.
