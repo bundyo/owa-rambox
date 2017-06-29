@@ -1,4 +1,4 @@
-# Outlook OWA support in Rambox
+# Exchange OWA support in Rambox
 
 How to use:
 
