@@ -2,7 +2,7 @@ setTimeout(() => {
     const target = $("[title=Inbox]").first().next().next()[0];
 
     const unreadObserver = new MutationObserver(() => {
-        updateBadge(target.textContent || 0);
+        updateBadge(target.textContent);
     });
 
     const newNotificationObserver = new MutationObserver((mutations) => {
@@ -76,11 +76,11 @@ setTimeout(() => {
     }
 
     function updateBadge(count) {
-        if (count) {
-            return document.title = `(${count}) ${document.title}`;
-        }
+        document.title = document.title.replace(/^\(\d+\)/g, "");
 
-        document.title.replace(/^\(\d+\)/g, "");
+        if (count) {
+            document.title = `(${count}) ${document.title}`;
+        }
     }
 
     const popups = $("body > [ispopup=1]");
@@ -93,7 +93,7 @@ setTimeout(() => {
         }
     });
 
-    updateBadge(target.textContent || 0);
+    updateBadge(target.textContent);
 
     unreadObserver.observe(target, { subtree: true, characterData: true });
 
