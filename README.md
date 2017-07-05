@@ -11,6 +11,6 @@ How to use:
 2. Open _Advanced_ and use these Custom Codes (depending on your feature preferences):
 
 * Unread count only, immediately updated - paste the contents of **unread-notification.js**
-* Unread count and web notifications on incoming mail - paste the contents of **new-mail-notification.js**
+* Unread count, incoming mail and calendar reminder notifications - paste the contents of **new-mail-notification.js**
 
 Ideas and pull requests are welcome.
